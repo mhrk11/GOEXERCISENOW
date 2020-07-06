@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<form action='' method='post'> {%csrf_token%}
+    {{form.as_p}}
+<p> Do you wish to delete the post {{blogpost.title}}? </p>
+<input type='submit' value='Confirm'>
+</form>
+{%endblock content%}

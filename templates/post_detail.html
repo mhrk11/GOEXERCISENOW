@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class='post-entry'>
+
+<h1> {{blogpost.title}} </h1>
+<p> {{blogpost.body}} </p>
+</div>
+
+<a href="{%url 'edit_post' blogpost.pk%}"> +Update this Blog </a>
+<br><br>
+
+
+<a href="{%url 'delete_post' blogpost.pk%}"> -Delete this Blog </a>
+
+
+{%endblock content%}
